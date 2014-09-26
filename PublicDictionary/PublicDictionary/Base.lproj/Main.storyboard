@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PublicDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SfS-Pv-dxl">
+                                <rect key="frame" x="0.0" y="21" width="480" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WxE-FJ-cNd">
+                                <rect key="frame" x="51" y="65" width="382" height="415"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultTable" destination="WxE-FJ-cNd" id="6hE-NB-OYZ"/>
+                        <outlet property="searchBar" destination="SfS-Pv-dxl" id="qpl-1q-i9b"/>
+                        <outlet property="searchDisplayController" destination="Btm-eF-Ca9" id="Zx0-oa-hrf"/>
+                        <outlet property="wordSearch" destination="SfS-Pv-dxl" id="pN7-Sb-VP6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Btm-eF-Ca9">
+                    <connections>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="zyI-dh-csH"/>
+                        <outlet property="searchContentsController" destination="vXZ-lx-hvc" id="3bh-fw-gp5"/>
+                        <outlet property="searchResultsDataSource" destination="vXZ-lx-hvc" id="9uY-Hl-fc7"/>
+                        <outlet property="searchResultsDelegate" destination="vXZ-lx-hvc" id="dbb-6n-5KQ"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+        </scene>
+    </scenes>
+</document>
